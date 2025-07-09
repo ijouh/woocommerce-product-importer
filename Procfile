@@ -1,1 +1,1 @@
-web: gunicorn main:app
+web: gunicorn add_product:app
