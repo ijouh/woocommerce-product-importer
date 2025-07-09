@@ -1,0 +1,29 @@
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environnements virtuels
+venv/
+env/
+.venv/
+
+# Fichiers de logs
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.bak
+
+# Configs sensibles (tu ne veux pas les pousser)
+*.env
+.env
+
+# Dossiers upload, media ou autre selon ton projet
+uploads/
+static/uploads/
+
+# Secrets Cloudinary ou API keys dans des fichiers de config (si tu les mets dans des fichiers)
+config.py
