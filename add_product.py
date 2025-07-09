@@ -6,19 +6,22 @@ import cloudinary.uploader
 from flask import Flask, render_template_string, request, redirect, flash
 from woocommerce import API
 import tempfile
+from dotenv import load_dotenv
+load_dotenv()
 
 # Config Cloudinary
 cloudinary.config(
-    cloud_name='djzgf1wnn',
-    api_key='723947715643454',
-    api_secret='l4za9y4VaspnjEyyLFNhvrkNKhU'
+    cloud_name=os.getenv("CLOUD_NAME"),
+    api_key=os.getenv("CLOUD_API_KEY"),
+    api_secret=os.getenv("CLOUD_API_SECRET")
 )
 
 # Config WooCommerce
+
 wcapi = API(
-    url="http://ijouhwebsite.kesug.com/",
-    consumer_key="ck_7281fc1e96cf927bfd3fcbf4068745bc0e751334",
-    consumer_secret="cs_bdb18f7ec5df7d56aaa309cb6cded35a8b3347c0",
+    url=os.environ.get("WC_URL"),
+    consumer_key=os.environ.get("WC_KEY"),
+    consumer_secret=os.environ.get("WC_SECRET"),
     version="wc/v3",
     timeout=120
 )
