@@ -1,1 +1,1 @@
-web: gunicorn add_product:interface_graf
+web: gunicorn main:app
